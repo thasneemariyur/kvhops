@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "autoname": "field:vendor_name",
+ "creation": "2026-08-11 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "vendor_name",
+  "plan_name",
+  "category",
+  "col_break1",
+  "cost",
+  "billing_cycle",
+  "next_renewal_date",
+  "status",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
+   "label": "Vendor Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "plan_name",
+   "fieldtype": "Data",
+   "label": "Plan Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nDesign Tools\nAnalytics\nMarketing Automation\nStorage\nCommunication\nOther"
+  },
+  {
+   "fieldname": "col_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cost",
+   "fieldtype": "Currency",
+   "label": "Cost (₹)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "billing_cycle",
+   "fieldtype": "Select",
+   "label": "Billing Cycle",
+   "options": "Monthly\nQuarterly\nYearly\nOne-time",
+   "default": "Monthly",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "next_renewal_date",
+   "fieldtype": "Date",
+   "label": "Next Renewal Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nPaused\nCancelled",
+   "default": "Active",
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "modified": "2026-08-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KVH Operations",
+ "name": "KVH Marketing Subscription",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Marketing Head",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH Marketing Member"
+  }
+ ],
+ "sort_field": "next_renewal_date",
+ "sort_order": "ASC",
+ "title_field": "plan_name"
+}
