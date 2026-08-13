@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "autoname": "field:effective_month",
+ "creation": "2026-08-11 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "effective_month",
+  "updated_by",
+  "section_tiers",
+  "tiers",
+  "section_notes",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "effective_month",
+   "fieldtype": "Date",
+   "label": "Effective Month (YYYY-MM-01)",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "bold": 1,
+   "description": "Set to first day of the month e.g. 2026-08-01"
+  },
+  {
+   "fieldname": "updated_by",
+   "fieldtype": "Link",
+   "label": "Updated By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_tiers",
+   "fieldtype": "Section Break",
+   "label": "Incentive Tiers"
+  },
+  {
+   "fieldname": "tiers",
+   "fieldtype": "Table",
+   "label": "Tiers",
+   "options": "KVH Incentive Tier"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "modified": "2026-08-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KVH Operations",
+ "name": "KVH Incentive Rule",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH Sales Head"
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH BDM"
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH CRE"
+  }
+ ],
+ "sort_field": "effective_month",
+ "sort_order": "DESC",
+ "title_field": "effective_month",
+ "track_changes": 1
+}
