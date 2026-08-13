@@ -1,0 +1,310 @@
+{
+ "actions": [],
+ "autoname": "KVH/JC/.FY./.####",
+ "creation": "2026-08-11 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "order_section",
+  "sales_order",
+  "customer",
+  "customer_name",
+  "order_date",
+  "committed_delivery_date",
+  "col_break1",
+  "branch",
+  "finish_type",
+  "include_installation",
+  "status",
+  "section_assignment",
+  "designer_assigned_to",
+  "fabricator",
+  "fabricator_name",
+  "col_break2",
+  "product_description",
+  "quantity",
+  "sheet_spec",
+  "grill_spec",
+  "installation_method",
+  "section_design",
+  "design_status",
+  "design_completed_at",
+  "section_factory",
+  "factory_stage",
+  "stage_updated_at",
+  "stage_updated_by",
+  "section_notes",
+  "notes",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "order_section",
+   "fieldtype": "Section Break",
+   "label": "Order Information"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "fetch_from": "sales_order.customer"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "fetch_from": "sales_order.customer_name",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "order_date",
+   "fieldtype": "Date",
+   "label": "Order Date",
+   "fetch_from": "sales_order.transaction_date"
+  },
+  {
+   "fieldname": "committed_delivery_date",
+   "fieldtype": "Date",
+   "label": "Committed Delivery Date"
+  },
+  {
+   "fieldname": "col_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "finish_type",
+   "fieldtype": "Select",
+   "label": "Finish Type",
+   "options": "\nPrimer Finish\nPowder Coating",
+   "default": "Primer Finish"
+  },
+  {
+   "fieldname": "include_installation",
+   "fieldtype": "Check",
+   "label": "Include Installation"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending Design\nIn Design\nPending CNC\nIn Fabrication\nReady for Delivery\nReady for Installation\nDelivered\nCancelled",
+   "default": "Pending Design",
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "section_assignment",
+   "fieldtype": "Section Break",
+   "label": "Assignment"
+  },
+  {
+   "fieldname": "designer_assigned_to",
+   "fieldtype": "Link",
+   "label": "Designer Assigned To",
+   "options": "User",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fabricator",
+   "fieldtype": "Link",
+   "label": "Fabricator (Master)",
+   "options": "KVH Fabricator"
+  },
+  {
+   "fieldname": "fabricator_name",
+   "fieldtype": "Data",
+   "label": "Fabricator Name"
+  },
+  {
+   "fieldname": "col_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_description",
+   "fieldtype": "Small Text",
+   "label": "Product Description",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity",
+   "default": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "sheet_spec",
+   "fieldtype": "Data",
+   "label": "Sheet Specification"
+  },
+  {
+   "fieldname": "grill_spec",
+   "fieldtype": "Data",
+   "label": "Grill Specification"
+  },
+  {
+   "fieldname": "installation_method",
+   "fieldtype": "Data",
+   "label": "Installation Method"
+  },
+  {
+   "fieldname": "section_design",
+   "fieldtype": "Section Break",
+   "label": "Design Status"
+  },
+  {
+   "fieldname": "design_status",
+   "fieldtype": "Select",
+   "label": "Design Status",
+   "options": "Pending\nIn Progress\nHold\nCompleted",
+   "default": "Pending",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "design_completed_at",
+   "fieldtype": "Datetime",
+   "label": "Design Completed At"
+  },
+  {
+   "fieldname": "section_factory",
+   "fieldtype": "Section Break",
+   "label": "Factory Stage"
+  },
+  {
+   "fieldname": "factory_stage",
+   "fieldtype": "Select",
+   "label": "Factory Stage",
+   "options": "Pending\nCNC\nFabrication\nSurface Finishing\nPrimer Coating\nPowder Coating\nPU Foam Filling\nAccessories\nPacking\nInstallation\nReady\nDispatched",
+   "default": "Pending",
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "stage_updated_at",
+   "fieldtype": "Datetime",
+   "label": "Stage Updated At"
+  },
+  {
+   "fieldname": "stage_updated_by",
+   "fieldtype": "Link",
+   "label": "Stage Updated By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_notes",
+   "fieldtype": "Section Break",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "options": "KVH Job Card",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "in_create": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KVH Operations",
+ "name": "KVH Job Card",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Admin",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH CRE",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Sales Head",
+   "write": 1,
+   "submit": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH BDM",
+   "write": 1,
+   "submit": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH Design Team",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Production Head",
+   "write": 1,
+   "submit": 1,
+   "delete": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Production Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH Factory Supervisor",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "product_description",
+ "track_changes": 1,
+ "track_seen": 1
+}

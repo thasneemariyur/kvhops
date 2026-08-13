@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "autoname": "KVH/TGT/.YYYY./.MM./.####",
+ "creation": "2026-08-11 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "cre_user",
+  "cre_name",
+  "col_break1",
+  "period_type",
+  "period_start",
+  "period_end",
+  "section_targets",
+  "target_amount",
+  "target_leads",
+  "col_break2",
+  "target_quotations",
+  "section_actuals",
+  "actual_amount",
+  "actual_leads",
+  "actual_quotations"
+ ],
+ "fields": [
+  {
+   "fieldname": "cre_user",
+   "fieldtype": "Link",
+   "label": "CRE User",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cre_name",
+   "fieldtype": "Data",
+   "label": "CRE Name",
+   "fetch_from": "cre_user.full_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "col_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period_type",
+   "fieldtype": "Select",
+   "label": "Period Type",
+   "options": "Weekly\nMonthly",
+   "default": "Monthly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period_start",
+   "fieldtype": "Date",
+   "label": "Period Start",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "period_end",
+   "fieldtype": "Date",
+   "label": "Period End",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_targets",
+   "fieldtype": "Section Break",
+   "label": "Targets"
+  },
+  {
+   "fieldname": "target_amount",
+   "fieldtype": "Currency",
+   "label": "Target Amount (₹)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "target_leads",
+   "fieldtype": "Int",
+   "label": "Target Leads"
+  },
+  {
+   "fieldname": "col_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "target_quotations",
+   "fieldtype": "Int",
+   "label": "Target Quotations"
+  },
+  {
+   "fieldname": "section_actuals",
+   "fieldtype": "Section Break",
+   "label": "Actuals (Auto-computed)"
+  },
+  {
+   "fieldname": "actual_amount",
+   "fieldtype": "Currency",
+   "label": "Actual Amount (₹)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_leads",
+   "fieldtype": "Int",
+   "label": "Actual Leads",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_quotations",
+   "fieldtype": "Int",
+   "label": "Actual Quotations",
+   "read_only": 1
+  }
+ ],
+ "modified": "2026-08-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KVH Operations",
+ "name": "KVH Sales Target",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Sales Head",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH BDM",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH CRE"
+  }
+ ],
+ "sort_field": "period_start",
+ "sort_order": "DESC",
+ "title_field": "cre_name",
+ "track_changes": 1
+}

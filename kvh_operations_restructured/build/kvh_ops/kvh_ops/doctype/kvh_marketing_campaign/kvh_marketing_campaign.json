@@ -1,0 +1,189 @@
+{
+ "actions": [],
+ "autoname": "KVH/MC/.FY./.####",
+ "creation": "2026-08-11 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "campaign_name",
+  "client",
+  "client_name_display",
+  "col_break1",
+  "sub_team",
+  "status",
+  "owner_user",
+  "description",
+  "section_dates",
+  "start_date",
+  "end_date",
+  "col_break2",
+  "budget_allocated",
+  "target_leads",
+  "platforms",
+  "section_content",
+  "content_items",
+  "section_ads",
+  "paid_ads",
+  "section_budget",
+  "budget_entries"
+ ],
+ "fields": [
+  {
+   "fieldname": "campaign_name",
+   "fieldtype": "Data",
+   "label": "Campaign Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "KVH Marketing Client",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "client_name_display",
+   "fieldtype": "Data",
+   "label": "Client Name",
+   "fetch_from": "client.client_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col_break1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_team",
+   "fieldtype": "Select",
+   "label": "Sub-Team",
+   "options": "\nSocial Media\nPerformance\nDesign\nVideo\nWebsite & SEO\nGeneral",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nInternal Review\nClient Approval\nApproved\nLive\nCompleted\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "owner_user",
+   "fieldtype": "Link",
+   "label": "Campaign Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "section_dates",
+   "fieldtype": "Section Break",
+   "label": "Dates & Budget"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "col_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "budget_allocated",
+   "fieldtype": "Currency",
+   "label": "Budget Allocated (₹)"
+  },
+  {
+   "fieldname": "target_leads",
+   "fieldtype": "Int",
+   "label": "Target Leads"
+  },
+  {
+   "fieldname": "platforms",
+   "fieldtype": "JSON",
+   "label": "Platforms",
+   "description": "List of platforms e.g. [\"Instagram\", \"Facebook\"]"
+  },
+  {
+   "fieldname": "section_content",
+   "fieldtype": "Section Break",
+   "label": "Content Items"
+  },
+  {
+   "fieldname": "content_items",
+   "fieldtype": "Table",
+   "label": "Content Items",
+   "options": "KVH Marketing Content Item"
+  },
+  {
+   "fieldname": "section_ads",
+   "fieldtype": "Section Break",
+   "label": "Paid Ads"
+  },
+  {
+   "fieldname": "paid_ads",
+   "fieldtype": "Table",
+   "label": "Paid Ads",
+   "options": "KVH Marketing Ad Item"
+  },
+  {
+   "fieldname": "section_budget",
+   "fieldtype": "Section Break",
+   "label": "Budget Entries"
+  },
+  {
+   "fieldname": "budget_entries",
+   "fieldtype": "Table",
+   "label": "Budget Entries",
+   "options": "KVH Marketing Budget Entry Item"
+  }
+ ],
+ "modified": "2026-08-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KVH Operations",
+ "name": "KVH Marketing Campaign",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Marketing Head",
+   "write": 1,
+   "delete": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH Marketing Member",
+   "write": 1
+  }
+ ],
+ "sort_field": "start_date",
+ "sort_order": "DESC",
+ "title_field": "campaign_name",
+ "track_changes": 1
+}

@@ -1,0 +1,22 @@
+[project]
+name = "kvh_ops"
+authors = [
+    { name = "KVH Industries", email = "admin@kvhindustries.com" }
+]
+description = "KVH Industries Operations Management System for ERPNext/Frappe"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    "openai>=1.0.0"
+]
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.module]
+name = "kvh_ops"
+
+[tool.bench.frappe-dependencies]
+frappe = ">=17.0.0-dev,<18.0.0"
