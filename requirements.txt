@@ -1,2 +1,0 @@
-# Python package dependencies for kvh_ops
-openai>=1.0.0
