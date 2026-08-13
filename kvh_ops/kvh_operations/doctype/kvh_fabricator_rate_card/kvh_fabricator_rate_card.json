@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "autoname": "field:product_key",
+ "creation": "2026-08-11 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Master",
+ "engine": "InnoDB",
+ "field_order": [
+  "product_key",
+  "display_name",
+  "rate",
+  "active"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_key",
+   "fieldtype": "Data",
+   "label": "Product Key (normalized)",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "description": "Lowercase, collapsed whitespace version of product name"
+  },
+  {
+   "fieldname": "display_name",
+   "fieldtype": "Data",
+   "label": "Display Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate (₹)",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "default": "1",
+   "in_list_view": 1
+  }
+ ],
+ "modified": "2026-08-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KVH Operations",
+ "name": "KVH Fabricator Rate Card",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "report": 1,
+   "role": "KVH Admin",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH Production Head",
+   "write": 1,
+   "create": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "KVH Production Manager"
+  }
+ ],
+ "sort_field": "display_name",
+ "sort_order": "ASC",
+ "title_field": "display_name"
+}
