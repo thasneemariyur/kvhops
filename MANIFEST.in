@@ -1,3 +1,0 @@
-include README.md
-recursive-include kvh_ops *.py *.json *.js *.css *.html *.txt
-recursive-include kvh_ops *.md
