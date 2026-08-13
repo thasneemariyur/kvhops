@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "creation": "2026-08-11 00:00:00.000000",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "istable": 1,
+ "field_order": [
+  "from_amount",
+  "to_amount",
+  "incentive_amount",
+  "label"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_amount",
+   "fieldtype": "Currency",
+   "label": "Sales From (₹)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "to_amount",
+   "fieldtype": "Currency",
+   "label": "Sales To (₹)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "incentive_amount",
+   "fieldtype": "Currency",
+   "label": "Incentive (₹)",
+   "reqd": 1,
+   "in_list_view": 1,
+   "bold": 1
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Data",
+   "label": "Tier Label"
+  }
+ ],
+ "modified": "2026-08-11 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "KVH Operations",
+ "name": "KVH Incentive Tier",
+ "owner": "Administrator",
+ "permissions": []
+}
