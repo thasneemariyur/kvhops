@@ -1,0 +1,29 @@
+[project]
+name = "kvh_ops"
+authors = [
+    { name = "KVH Industries", email = "admin@kvhindustries.com" }
+]
+description = "KVH Industries Operations Management System for ERPNext/Frappe"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = [
+    "openai>=1.0.0"
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["kvh_ops*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json", "*.js", "*.css", "*.html", "*.txt", "*.md"]
+
+[tool.setuptools.dynamic]
+version = { attr = "kvh_ops.__version__" }
+
+[tool.bench.frappe-dependencies]
+frappe = ">=17.0.0-dev,<18.0.0"
